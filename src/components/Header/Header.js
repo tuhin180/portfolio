@@ -62,7 +62,7 @@ const Header = () => {
             src={navimg1}
             alt=""
           />
-          <Link className=" normal-case text-xl  font-bold hover:text-primary ">
+          <Link className=" uppercase  text-xl  font-bold hover:text-primary ">
             MD.Tuhin Hossain
           </Link>
         </div>
