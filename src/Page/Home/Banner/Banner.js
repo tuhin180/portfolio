@@ -13,7 +13,7 @@ const Banner = () => {
           backgroundImage: `url(${banner})`,
         }}
       >
-        <div class="mx-auto max-w-screen-xl px-3 py-20 lg:flex lg:h-screen lg:items-center ">
+        <div className="mx-auto max-w-screen-xl px-3 py-20 lg:flex lg:h-screen lg:items-center ">
           <div className="bg-white flex flex-col p-5 gap-3 ">
             <Link className="hover:text-primary">
               <FaFacebook className="text-4xl" />
@@ -25,18 +25,18 @@ const Banner = () => {
               <FaLinkedin className="text-4xl" />
             </Link>
           </div>
-          <div class="mx-auto max-w-3xl text-center">
-            <h1 class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-xl font-extrabold text-transparent md:text-5xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-xl font-extrabold text-transparent md:text-5xl">
               HEY,I'M MD.TUHIN HOSSAIN
             </h1>
 
-            <p class="mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed text-white">
+            <p className="mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed text-white">
               Seeking roles to utilise my in-depth knowledge of UI/UX
               development and responsive designing to create exceptional
               interfaces and user experiences.
             </p>
 
-            <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link>
                 <PrimaryButton name={"projects"} />
               </Link>
