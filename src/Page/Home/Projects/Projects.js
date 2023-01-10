@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import ProjectCard from "./ProjectCard";
+import Spinner from "../../../components/Spinner/Spinner";
 const Projects = () => {
   const {
     isLoading,
@@ -9,10 +10,12 @@ const Projects = () => {
   } = useQuery({
     queryKey: ["Pojects"],
     queryFn: () =>
-      fetch("http://localhost:5000/projects").then((res) => res.json()),
+      fetch("https://portfolio-server-rho.vercel.app/projects").then((res) =>
+        res.json()
+      ),
   });
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <Spinner />;
 
   if (error) return "An error has occurred: " + error.message;
   console.log(projects);
@@ -20,8 +23,8 @@ const Projects = () => {
     <>
       <div className="mt-4 mx-auto sm:w-full md:w-1/2">
         <h1
-          id="about"
-          className="uppercase text-center text-2xl  font-extrabold  "
+          id="projects"
+          className="uppercase text-center text-4xl  font-extrabold  "
         >
           Projects
         </h1>

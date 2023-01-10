@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import navimg1 from "../../assets/image/ttttttttt.png";
+import Toggle from "../DarkMode.js/Toggle";
 
 const Header = () => {
   const navitem = (
@@ -12,27 +13,34 @@ const Header = () => {
         </Link>
       </li>
       <li>
-        <Link
-          to="#about"
+        <a
+          href="/#about"
           className="uppercase hover:font-bold hover:text-primary"
         >
           About
-        </Link>
+        </a>
       </li>
       <li>
-        <Link className="uppercase hover:font-bold hover:text-primary">
+        <a
+          href="/#projects"
+          className="uppercase hover:font-bold hover:text-primary"
+        >
           Projects
-        </Link>
+        </a>
       </li>
       <li>
-        <Link className="uppercase hover:font-bold hover:text-primary ">
+        <a
+          href="/#contact"
+          className="uppercase hover:font-bold hover:text-primary "
+        >
           Contact
-        </Link>
+        </a>
+        <Toggle />
       </li>
     </React.Fragment>
   );
   return (
-    <div className="navbar bg-white  fixed top-0 ">
+    <div className="navbar bg-white dark:bg-black fixed top-0 ">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -53,7 +61,7 @@ const Header = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 dark:bg-black dark:text-white rounded-box w-52"
           >
             {navitem}
           </ul>
@@ -64,12 +72,18 @@ const Header = () => {
           src={navimg1}
           alt=""
         />
-        <Link className=" uppercase  text-xl  font-bold hover:text-primary ">
+        <Link
+          to="/"
+          className=" uppercase  text-xl  font-bold hover:text-primary  dark:text-white dark:hover:text-primary"
+        >
           MD.Tuhin Hossain
         </Link>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal p-0 mr-10 ">{navitem}</ul>
+        <ul className="menu menu-horizontal p-0 mr-10  dark:text-white">
+          {navitem}
+        </ul>
+        {/* <Toggle /> */}
       </div>
     </div>
   );

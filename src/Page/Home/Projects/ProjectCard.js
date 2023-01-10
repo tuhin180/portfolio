@@ -7,7 +7,12 @@ const ProjectCard = ({ project }) => {
   return (
     <>
       <div>
-        <img src={img} alt="" />
+        <img
+          style={{ objectFit: "cover" }}
+          className="rounded-t-lg w-full "
+          src={img}
+          alt=""
+        />
       </div>
       <div className="  w-full md:w-3/4 grid content-center">
         <h1 className="text-2xl font-bold text-center md:text-left ">

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="bg-black">
-      <div className="mt-16 p-20">
+      <div className="mt-16 sm:p-10 md:p-20">
         <div className="grid grid-cols-1 md:grid-cols-2 justify-end">
-          <div className="w-3/4">
-            <h1 className="text-white text-xl text-left font-bold uppercase">
+          <div className="sm:w-full md:w-3/4 ">
+            <h1 className=" mt-10 text-white text-xl text-left font-bold uppercase">
               MD.Tuhin Hossain
             </h1>
             <p className="mt-8 text-white text-left">
