@@ -11,7 +11,9 @@ const Home = () => {
         <title>TuhinHossain - Home</title>
       </Helmet>
       <Banner />
+
       <About />
+
       <Projects />
       <Contact />
     </div>

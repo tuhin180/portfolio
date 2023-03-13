@@ -6,7 +6,11 @@ const ProjectCard = ({ project }) => {
   const { _id, img, title, description } = project;
   return (
     <>
-      <div>
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <img
           style={{ objectFit: "cover" }}
           className="rounded-t-lg w-full "
@@ -14,7 +18,12 @@ const ProjectCard = ({ project }) => {
           alt=""
         />
       </div>
-      <div className="  w-full md:w-3/4 grid content-center">
+      <div
+        className="  w-full md:w-3/4 grid content-center"
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <h1 className="text-2xl font-bold text-center md:text-left ">
           {title}
         </h1>

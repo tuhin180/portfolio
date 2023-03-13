@@ -6,7 +6,11 @@ const Contact = () => {
   //   };
   return (
     <>
-      <div className="  mt-4 mx-auto sm:w-full md:w-1/2 ">
+      <div
+        className="  mt-4 mx-auto sm:w-full md:w-1/2 "
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <h1
           id="contact"
           className="uppercase text-center text-4xl  font-extrabold  "
@@ -19,7 +23,12 @@ const Contact = () => {
           back to you as soon as possible
         </p>
       </div>
-      <div className="my-20 ">
+      <div
+        className="my-20 "
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
         <form
           action="https://formspree.io/f/xzbwnyjj"
           method="POST"

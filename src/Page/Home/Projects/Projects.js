@@ -21,7 +21,11 @@ const Projects = () => {
   console.log(projects);
   return (
     <>
-      <div className="mt-4 mx-auto sm:w-full md:w-1/2">
+      <div
+        className="mt-4 mx-auto sm:w-full md:w-1/2"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <h1
           id="projects"
           className="uppercase text-center text-4xl  font-extrabold  "

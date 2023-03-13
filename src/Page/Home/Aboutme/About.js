@@ -5,7 +5,11 @@ import PrimaryButton from "../../../components/Button/PrimaryButton";
 const About = () => {
   return (
     <>
-      <div className="  mt-4 mx-auto sm:w-full md:w-1/2  ">
+      <div
+        className="  mt-4 mx-auto sm:w-full md:w-1/2  "
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom"
+      >
         <h1
           id="about"
           className="uppercase text-center text-4xl  font-extrabold "
@@ -19,7 +23,12 @@ const About = () => {
         </p>
       </div>
       <div className=" p-4 grid grid-cols-1 md:grid-cols-2 sm:w-full md:w-10/12 mx-auto mt-8 gap-10">
-        <div className="sm:text-center md:text-left">
+        <div
+          className="sm:text-center md:text-left "
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <h1 className="font-bold text-2xl">Get to know me!</h1>
           <p className="mt-8">
             I'm a <strong>Frontend Web Developer</strong> building the Front-end
@@ -41,7 +50,12 @@ const About = () => {
             <PrimaryButton classes={"mt-5"} name={"contact"}></PrimaryButton>
           </div>
         </div>
-        <div>
+
+        <div
+          data-aos="fade-left"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <h1 className="font-bold text-2xl">Skill</h1>
           <div className="flex flex-wrap gap-4 mt-8 w-4/6">
             <div className="px-4 py-2 rounded-lg bg-slate-200 text-center  block dark:bg-transparent dark:border-2 dark:border-x-white dark:border-y-blue-500">

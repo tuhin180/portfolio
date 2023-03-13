@@ -1,12 +1,26 @@
 import React from "react";
 import banner from "../../../assets/image/banner2.jpg";
-import bannervideo from "../../../assets/image/baner.mp4";
+
 import { FaFacebook } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
 import PrimaryButton from "../../../components/Button/PrimaryButton";
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 const Banner = () => {
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
   return (
     <>
       <section
@@ -15,6 +29,83 @@ const Banner = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={{
+            // background: {
+            //   color: {
+            //     value: "#0d47a1",
+            //   },
+            // },
+            fpsLimit: 100,
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: true,
+                  mode: "repulse",
+                },
+                resize: true,
+              },
+              modes: {
+                push: {
+                  quantity: 4,
+                },
+                repulse: {
+                  distance: 200,
+                  duration: 0.8,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: "#ffffff",
+              },
+              links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: true,
+                opacity: 0.5,
+                width: 1,
+              },
+              collisions: {
+                enable: true,
+              },
+              move: {
+                directions: "none",
+                enable: true,
+                outModes: {
+                  default: "bounce",
+                },
+                random: false,
+                speed: 6,
+                straight: false,
+              },
+              number: {
+                density: {
+                  enable: true,
+                  area: 800,
+                },
+                value: 80,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 5 },
+              },
+            },
+            detectRetina: true,
+          }}
+        />
         <div className="mx-auto max-w-screen-xl px-3 py-20 lg:flex lg:h-screen lg:items-center ">
           <div className=" first-letter:bg-transparent flex flex-col md:top-36 lg:top-0 gap-3 invisible md:visible">
             <a
@@ -51,7 +142,7 @@ const Banner = () => {
                 onInit={(typewriter) => {
                   typewriter
                     .typeString(
-                      "Seeking roles to utilise my in-depth knowledge of UI/UX development and responsive designing to create exceptional interfaces and user experiences."
+                      "Seeking roles to utilise my in-depth knowledge of FrontEnd development and responsive designing to create exceptional interfaces and user experiences."
                     )
                     .callFunction(() => {
                       console.log("String typed out!");
@@ -73,7 +164,7 @@ const Banner = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://drive.google.com/file/d/1X1VNkv0WVJsQ_SGM-0kKeSBuKYN2_JMw/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ccXd38m5JMIOqjFjIBZItfPaw6Zk5ZP5/view?usp=sharing"
               >
                 {/* <PrimaryButton
                   classes={"bg-white"}

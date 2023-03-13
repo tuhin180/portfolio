@@ -5,7 +5,11 @@ import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="bg-black">
+    <div
+      className="bg-black"
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
+    >
       <div className="mt-16 sm:p-10 md:p-20">
         <div className="grid grid-cols-1 md:grid-cols-2 justify-end">
           <div className="sm:w-full md:w-3/4 ">
