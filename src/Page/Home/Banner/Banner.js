@@ -164,7 +164,7 @@ const Banner = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://drive.google.com/file/d/1ccXd38m5JMIOqjFjIBZItfPaw6Zk5ZP5/view?usp=sharing"
+                href="https://drive.google.com/file/d/10YeX__aYMg50eD3bE_BjzaVvH1h9-31o/view?usp=sharing"
               >
                 {/* <PrimaryButton
                   classes={"bg-white"}
